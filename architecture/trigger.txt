@@ -1,0 +1,46 @@
+- To Trigger ECS:
+
+{
+  "arn": "arn:aws:ecs:eu-central-1:0123456789:task-definition/project1:1",
+  "cluster_name": "cluster",
+  "path": "data/project1",
+  "project-name": "project1",
+  "securitygroups": [
+    "sg-0123456789
+  ],
+  "subnets": [
+    "subnet-0123456789",
+    "subnet-9876543210"
+  ],
+  "task_count": "1",
+  "trigger": true
+}
+
+
+- To Trigger SQS:
+
+{
+  "arn": "arn:aws:sqs:eu-central-1:0123456789:automate",
+  "path": "data/project2/service-data",
+  "project-name": "project2",
+  "trigger": true
+}
+
+
+- To Trigger Lambda:
+
+{
+  "arn": "arn:aws:lambda:eu-central-1:0123456789:function:project3",
+  "path": "data/project3/etl-data/offline",
+  "project-name": "project3",
+  "trigger": true
+}
+
+- To Trigger SNS:
+
+{
+  "arn": "arn:aws:sns:eu-central-1:0123456789:project4",
+  "path": "data/project4/online",
+  "project-name": "project4",
+  "trigger": true
+}
